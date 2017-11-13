@@ -75,7 +75,7 @@ void HogFeature::getFeature(Mat img){
     for(int u=0; u < _block_size; u++){
       for(int v=0; v < _block_size; v++){
         for(int step=0; step < _cell_stride; step++){
-          hog_feature[t*_block_size + 9*(3*u+v) + step] = cell_feature[(6*(u+_bias_y)+v+_bias_x)*_cell_stride + step];
+          hog_feature[t*_block_stride + 9*(3*u+v) + step] = cell_feature[(6*(u+_bias_y)+v+_bias_x)*_cell_stride + step];
         }
       }
     }
